@@ -17,6 +17,20 @@ class ImagesCollectionController: UICollectionViewController, UpdateProtocol {
         super.viewDidLoad()
 
         loadImages()
+        setUpController()
+    }
+    
+    private func setUpController(){
+        
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        layout.itemSize = CGSize(width: screenWidth/2, height: screenWidth/2)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView!.collectionViewLayout = layout
     }
     
     private func loadImages(){
