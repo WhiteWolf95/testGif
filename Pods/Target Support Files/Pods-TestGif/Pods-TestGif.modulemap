@@ -1,0 +1,6 @@
+framework module Pods_TestGif {
+  umbrella header "Pods-TestGif-umbrella.h"
+
+  export *
+  module * { export * }
+}
